@@ -3,6 +3,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import application.model.Jogo;
 
-public interface CategoriaRepository extends CrudRepository<Jogo, Long> {
+public interface JogoRepository extends CrudRepository<Jogo, Long> {
 
 }

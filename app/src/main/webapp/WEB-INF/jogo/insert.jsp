@@ -29,9 +29,9 @@
                     <label for-"plataforma">Plataforma(s):</label>
                     <c:forEach var="p" items="${plataformas}">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" name="plataformas" value="$(p.id)"
+                            <input type="checkbox" class="custom-control-input" name="plataformas" value="${p.id}"
                                 id="${p.id}" />
-                            label class="custom-control-label" for="$(p.id)">${p.nome}</label>
+                            label class="custom-control-label" for="${p.id}">${p.nome}</label>
                             </div>
                     </c:forEach>
                 </div>

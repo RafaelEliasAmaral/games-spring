@@ -13,7 +13,7 @@
             <h1>Nova Categoria</h1>
             <form action="/categoria/insert" method="post">
                 <div class="form-group">
-                    <label for="nome">Nome: </label>
+                    <label for="nome">Nome:</label>
                     <input type="text" name="nome" class="form-control" />
                 </div>
                 <br />

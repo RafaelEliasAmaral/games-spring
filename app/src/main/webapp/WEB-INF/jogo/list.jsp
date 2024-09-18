@@ -21,7 +21,7 @@
                         <th>Plataformas</th>
                         <th>&nbsp;</th>
                     </tr>
-                    <c:forEach var="item" items="$(jogos)">
+                    <c:forEach var="item" items="${jogos}">
                         <tr>
                             <td>${item.id}</td>
                             <td>${item.titulo}</td>
@@ -29,7 +29,7 @@
                             <td>
                                 <c:forEach var="p" varStatus="s" items="${item.plataformas}">
                                     ${s.getCount()>17",":""}
-                                    $(p.nome)
+                                    ${p.nome}
                                 </c:forEach>
                             </td>
                             <td>

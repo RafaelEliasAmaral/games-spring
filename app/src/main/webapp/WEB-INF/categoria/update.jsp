@@ -12,10 +12,10 @@
         <div class="container">
             <h1>Editar Categoria</h1>
             <form action="/categoria/update" method="post">
-                <input type="hidden" name="id" value="${categoria.id)" />
+                <input type="hidden" name="id" value="${categoria.id}" />
                 <div class="form-group">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" class="form-control" value="$(categoria.nome}" />
+                    <input type="text" name="nome" class="form-control" value="${categoria.nome}" />
                 </div>
                 <br />
                 <a href="/categoria/list" class="btn btn-primary">Voltar</a>

@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <h1>Remover Categoria</h1>
-            <p>Tem certeza que deseja remover a categoria "${categoria.nome)" ?</p>
+            <p>Tem certeza que deseja remover a categoria "${categoria.nome}" ?</p>
             <form action="/categoria/delete" method="post">
                 <input type="hidden" name="id" value="${categoria.id}" />
                 <br />

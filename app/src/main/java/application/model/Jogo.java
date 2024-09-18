@@ -37,7 +37,7 @@ public class Categoria {
         this.id = id;
     }
 
-    public getTitulo() {
+    public String getTitulo() {
         return titulo;
 
     }
