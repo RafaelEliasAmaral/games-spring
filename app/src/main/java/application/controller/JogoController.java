@@ -59,7 +59,7 @@ import application.repository.PlataformaRepository;
         @RequestParam("id") long id,
         Model ui) {
 
-        Optional<logo> jogo = jogoRepo.findById(id);
+        Optional<Jogo> jogo = jogoRepo.findById(id);
         if(jogo.isPresent()) {
             ui.addAttribute("jogo", jogo.get());
             ui.addAttribute("categorias", categoriaRepo.findAll());
@@ -75,7 +75,8 @@ import application.repository.PlataformaRepository;
         @RequestParam("categoria") long idCategoria, 
         @RequestParam("plataformas") long[] idsPlataformas) {
 
-        Optional<logn> jogo = jogoRepo. FindById(id);
+            Optional<Jogo> jogo = jogoRepo.findById(id);
+
 
         if (jogo. isPresent()) {
             jogo.get().setTitulo(titulo);

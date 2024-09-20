@@ -1,21 +1,23 @@
 package application.model;
 import java.lang.annotation.Inherited;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.annotation.processing.Generated;
 
-import jakarta.persitence.Column;
-import jakarta.persitence.Entity;
-import jakarta.persitence.GeneratedValue;
-import jakarta.persitence.GenerationType;
-import jakarta.persitence.Id;
-import jakarta.persitence.OneToMany;
-import jakarta.persitence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
 
 @Entity
 @Table(name = "jogos")
-public class Categoria {
+public class Jogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -23,11 +25,16 @@ public class Categoria {
     private String titulo;
 
     @ManyToOne
+    @JoinColumn(name = "id_genero")
+    private Categoria categoria;
+
+    @ManyToMany
     @JoinTable(
         name = "jogos_possuem_plataformas",
         JoinColumns = @JoinColumn(name = "id_jogos"),
-        inverseJoinColumns = @JoinColumn(name = "id_plataformas"))
-    private Set<plataforma> plataformas = new HashSet<>();
+        inverseJoinColumns = @JoinColumn(name = "id_plataformas")
+    )
+    private Set<Plataforma> plataformas = new HashSet<>();
 
     public long getId() {
         return id;
@@ -52,9 +59,10 @@ public class Categoria {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
-    public Set<Plataforma> getCPlataformas() {
+    public Set<Plataforma> getPlataformas() {
         return plataformas;
     }
+
     public void setPlataformas(Set<Plataforma> plataformas) {
         this.plataformas = plataformas;
     }
