@@ -28,7 +28,7 @@
                             <td>${item.categoria.nome}</td>
                             <td>
                                 <c:forEach var="p" varStatus="s" items="${item.plataformas}">
-                                    ${s.getCount()>17",":""}
+                                    ${s.getCount() > 1 ? ",": ""}
                                     ${p.nome}
                                 </c:forEach>
                             </td>

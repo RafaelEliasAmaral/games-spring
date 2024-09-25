@@ -12,7 +12,7 @@
         <div class="container">
             <h1>Editar Plataforma</h1>
             <form action="/plataforma/update" method="post">
-                <input type="hidden" name="id" value="${plataforma.id)" />
+                <input type="hidden" name="id" value="${plataforma.id}" />
                 <div class="form-group">
                     <label for="nome">Nome: </label>
                     <input type="text" name="nome" class="form-control" value="${plataforma.nome}" />

@@ -15,8 +15,8 @@
             <form action="/jogo/delete" method="post">
                 <input type="hidden" name="id" value="${jogo.id}" />
                 <br />
-                <a href="/jogo/list" class="btn btn-primary">Voltar</a> <button type="submit"
-                    class="btn btn-danger">Excluir</button>
+                <a href="/jogo/list" class="btn btn-primary">Voltar</a> 
+                <button type="submit"class="btn btn-danger">Excluir</button>
             </form>
         </div>
     </body>

@@ -1,18 +1,8 @@
 package application.model;
-import java.lang.annotation.Inherited;
+
 import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-import javax.annotation.processing.Generated;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 
 
 @Entity
@@ -20,7 +10,8 @@ import jakarta.persistence.Table;
 public class Jogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
     @Column(nullable = true)
     private String titulo;
 
@@ -31,7 +22,7 @@ public class Jogo {
     @ManyToMany
     @JoinTable(
         name = "jogos_possuem_plataformas",
-        JoinColumns = @JoinColumn(name = "id_jogos"),
+        joinColumns = @JoinColumn(name = "id_jogos"),
         inverseJoinColumns = @JoinColumn(name = "id_plataformas")
     )
     private Set<Plataforma> plataformas = new HashSet<>();
